@@ -1,50 +1,94 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>LocaTech | Clássicos em VHS e DVD</title>
+<!-- Define o tipo de documento como HTML5, informando ao navegador como interpretar a página -->
+<!DOCTYPE html>  
+<!-- Tag raiz do documento HTML. O atributo lang="pt-BR" especifica que o conteúdo principal está em português do Brasil Acessibilidade e SEO: O uso de lang="pt-BR" ajuda leitores de tela para pessoas com deficiência visual a pronunciarem as palavras corretamente --> 
+<html lang="pt-BR"> 
+<!-- Cabeçalho do documento: contém metadados, links para estilos e informações não visíveis na página -->
+<head> 
+<!-- Define o conjunto de caracteres como UTF-8, garantindo suporte a acentos (ç, á, é, etc.) e caracteres especiais -->
+<meta charset="UTF-8" /> 
+<!-- Configura a viewport para responsividade, fazendo com que a página se adapte largura da tela do dispositivo (como celulares) com escala inicial 1.0 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+<!-- Define o título da página que aparece na aba do navegador e nos resultados de busca -->
+<title>LocaTech | Clássicos em VHS e DVD</title> 
+<!-- Descrição da página para motores de busca (SEO), resumindo o conteúdo do site nos resultados do Google -->
 <meta name="description" content="Catálogo retrô da LocaTech com clássicos em VHS e DVD organizados por gênero." />
+<!-- Importa o arquivo de estilo externo (CSS) chamado "loctech-estilos.css" para estilizar o layout da página -->
 <link rel="stylesheet" href="loctech-estilos.css" />
+<!-- Fechamento do cabeçalho -->
 </head>
+<!-- Início do corpo do documento, onde fica todo o conteúdo visível para o usuário -->
 <body>
+<!-- Divisão genérica (container) com a classe "site-shell", frequentemente usada na arquitetura CSS para envelopar todo o layout e aplicar limites de largura ou centralização na tela -->
 <div class="site-shell">
-
+    <!-- Tag estrutural HTML5 para o cabeçalho do site, identificada pela classe "store-header" para estilização CSS -->
     <header class="store-header">
+    <!-- Container interno para agrupar e centralizar o conteúdo do cabeçalho -->
     <div class="header-content">
+        <!-- Container do logotipo, agrupando o ícone retrô e o nome da marca -->
         <div class="logo-lockup">
+        <!-- Elemento visual decorativo (símbolo de rebobinar ◀◀). O atributo aria-hidden="true" faz com que leitores de tela para pessoas com deficiência visual ignorem o símbolo, evitando leituras confusas -->
         <span class="rewind-mark" aria-hidden="true">◀◀</span>
+        <!-- Título principal da página (H1). A tag <span> na palavra "TECH" permite aplicar uma cor ou estilo diferente só nessa metade da palavra via CSS -->
         <h1>LOCA<span>TECH</span></h1>
+        <!-- Fechamento da div do logotipo -->
         </div>
+        <!-- Parágrafo de slogans ou descrição rápida. A tag <span> no ponto central (•) permite ajustar o espaçamento ou cor desse separador via CSS -->
         <p>A sua locadora de vídeos digital <span>•</span> Reviva os clássicos</p>
+        <!-- Selo ou distintivo estilizado (badge). O trecho &amp; é a entidade HTML segura para exibir o caractere "e comercial" (&) sem quebrar o código -->
         <div class="header-badge">HI-FI STEREO / VHS &amp; DVD</div>
-    </div>
-    </header>
+    </div> <!-- Fechamento do container do conteúdo do cabeçalho -->
+    </header> <!-- Fechamento do cabeçalho da loja -->
+    <!-- Tag estrutural HTML5 que delimita o conteúdo principal e exclusivo desta página -->
     <main>
+        <!-- Container da seção de introdução/informações rápidas do catálogo -->
         <div class="catalog-intro">
+            <!-- Exibe uma informação de rodapé/cabeçalho da loja (número/mês da edição do catálogo) -->
             <span>CATÁLOGO Nº 09/26</span>
+            <!-- Parágrafo com instruções de interação para o usuário -->
             <p>Passe o mouse nas fitas para ver os detalhes</p>
+            <!-- Exibe a quantidade total de títulos disponíveis no catálogo -->
             <span>30 TÍTULOS</span>
-        </div>
-    
+        </div> <!-- Fechamento do container de introdução do catálogo -->
+        <!-- Seção que agrupa os filmes de uma categoria específica. Usa duas classes CSS: uma genérica ("category-section") e uma específica ("category-1") -->
         <section class="category-section category-1">
-        <div class="category-inner">
+            <!-- Container interno da categoria para aplicação de padding, margens ou limites de largura -->
+            <div class="category-inner">
+            <!-- Container do cabeçalho da categoria (ícone, nome do gênero e identificador) -->
             <div class="category-heading">
+            <!-- Ícone decorativo de estrela (★). O atributo aria-hidden="true" impede que leitores de tela leiam "estrela" de forma desnecessária -->
             <span aria-hidden="true">★</span>
+            <!-- Título de nível 2 que define o nome da categoria/gênero nesta seção -->
             <h2>Ficção Científica</h2>
+            <!-- Elemento visual temático simulando a localização física na locadora ("CORREDOR 01") -->
             <span class="aisle-number">CORREDOR 01</span>
             </div>
+            <!-- Representação visual da "prateleira" de filmes -->
             <div class="shelf">
+            <!-- Container em grade (CSS Grid) para organizar os cards dos filmes em colunas -->
             <div class="grid-movies">
+            <!-- Tag semântica <article> que delimita o card individual de um filme. 
+            - tabindex="0" torna o card focável via teclado (tecla Tab) para acessibilidade.
+            - aria-label fornece uma descrição completa e resumida do card para leitores de tela -->
             <article class="movie-card" tabindex="0" aria-label="Matrix, 1999, VHS / DVD">
-            <div class="poster-container">
+            <!-- Container da imagem da capa e seus adesivos/sobreposições -->
+                <div class="poster-container">
+                <!-- Elemento que simula um adesivo físico colado na fita VHS (ex: "Disponível") -->
                 <span class="vhs-sticker">Disponível</span>
+                <!-- Imagem do pôster do filme:
+                - src: link da imagem no TMDB.
+                - alt: texto alternativo para leitores de tela e caso a imagem não carregue.
+                - loading="lazy": carregamento diferido, melhorando a performance ao carregar a imagem apenas quando ela entra na tela -->
                 <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg" alt="Capa de Matrix" loading="lazy" />
             </div>
+            <!-- Container com as informações textuais do filme -->
             <div class="movie-info">
+                <!-- Título de nível 3 com o nome do filme -->
                 <h3>Matrix</h3>
+                <!-- Container para os metadados do filme (ano e mídia) -->
                 <div class="movie-meta">
+                <!-- Exibe o ano de lançamento -->
                 <span>1999</span>
+                <!-- Badge/selo estilizado indicando os formatos disponíveis (VHS / DVD) -->
                 <span class="format-badge">VHS / DVD</span>
                 </div>
             </div>
