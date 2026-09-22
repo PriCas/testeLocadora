@@ -1,18 +1,19 @@
 @@ -0,0 +1,138 @@
-@import "tailwindcss" source(none);
-@source "../src";
-@import "tw-animate-css";
+/* Importando "tailwindcss e tw-animate-css"*/
+@import "tailwindcss" source(none);   
+@source "../src";  
+@import "tw-animate-css";   
 
 @theme inline {
---color-background: var(--background);
---color-foreground: var(--foreground);
---color-primary: var(--primary);
---color-primary-foreground: var(--primary-foreground);
---color-muted: var(--muted);
---color-muted-foreground: var(--muted-foreground);
---color-border: var(--border);
---font-display: "Bebas Neue", sans-serif;
---font-body: "Work Sans", sans-serif;
+--color-background: var(--background); /* Define a cor de fundo usando a variável --background */
+--color-foreground: var(--foreground);   /* Define a cor principal do texto/conteúdo usando --foreground */
+--color-primary: var(--primary);   /* Define a cor principal da aplicação usando --primary */
+--color-primary-foreground: var(--primary-foreground);  /* Define a cor do conteúdo que aparece sobre a cor principal */
+--color-muted: var(--muted);   /* Define uma cor mais discreta/secundária */
+--color-muted-foreground: var(--muted-foreground);    /* Define a cor do texto usado sobre elementos discretos */
+--color-border: var(--border);  /* Define a cor das bordas */
+--font-display: "Bebas Neue", sans-serif;   /* Define a fonte usada para títulos/destaques */
+--font-body: "Work Sans", sans-serif;  /* Define a fonte usada para textos comuns */
 }
 
 :root {
