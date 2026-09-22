@@ -16,72 +16,159 @@
 --font-body: "Work Sans", sans-serif;  /* Define a fonte usada para textos comuns */
 }
 
+/*Funcionam com variaveis globais podendo ser chamada no codigo inteiro*/
 :root {
---background: oklch(0.93 0.022 82);
---foreground: oklch(0.19 0.025 50);
---primary: oklch(0.62 0.19 35);
---primary-foreground: oklch(0.98 0.014 95);
---muted: oklch(0.87 0.027 76);
---muted-foreground: oklch(0.42 0.032 55);
---border: oklch(0.31 0.055 49);
---ink: oklch(0.17 0.02 45);
---paper: oklch(0.96 0.024 91);
---cream: oklch(0.93 0.035 83);
---red: oklch(0.53 0.19 30);
---yellow: oklch(0.82 0.16 87);
---green: oklch(0.51 0.09 165);
---blue: oklch(0.47 0.11 244);
---wood-dark: oklch(0.25 0.07 52);
---wood: oklch(0.43 0.1 57);
---wood-light: oklch(0.62 0.12 65);
---wall-1: oklch(0.77 0.08 215);
---wall-2: oklch(0.64 0.09 26);
---wall-3: oklch(0.83 0.12 92);
---wall-4: oklch(0.72 0.1 159);
---wall-5: oklch(0.77 0.08 351);
---wall-6: oklch(0.69 0.09 61);
---shadow-deep: 0 18px 28px oklch(0.14 0.025 50 / 0.38);
+--background: oklch(0.93 0.022 82); /*Variável com valor atribuido(cor)*/
+--foreground: oklch(0.19 0.025 50); /*Variável com valor atribuido(cor)*/
+--primary: oklch(0.62 0.19 35); /*Variável com valor atribuido(cor)*/
+--primary-foreground: oklch(0.98 0.014 95); /*Variável com valor atribuido(cor)*/
+--muted: oklch(0.87 0.027 76); /*Variável com valor atribuido(cor)*/
+--muted-foreground: oklch(0.42 0.032 55); /*Variável com valor atribuido(cor)*/
+--border: oklch(0.31 0.055 49); /*Variável com valor atribuido(cor)*/
+--ink: oklch(0.17 0.02 45); /*Variável com valor atribuido(cor)*/
+--paper: oklch(0.96 0.024 91); /*Variável com valor atribuido(cor)*/
+--cream: oklch(0.93 0.035 83); /*Variável com valor atribuido(cor)*/
+--red: oklch(0.53 0.19 30); /*Variável com valor atribuido(cor)*/
+--yellow: oklch(0.82 0.16 87); /*Variável com valor atribuido(cor)*/
+--green: oklch(0.51 0.09 165); /*Variável com valor atribuido(cor)*/
+--blue: oklch(0.47 0.11 244); /*Variável com valor atribuido(cor)*/
+--wood-dark: oklch(0.25 0.07 52); /*Variável com valor atribuido(cor)*/
+--wood: oklch(0.43 0.1 57); /*Variável com valor atribuido(cor)*/ 
+--wood-light: oklch(0.62 0.12 65); /*Variável com valor atribuido(cor)*/
+--wall-1: oklch(0.77 0.08 215); /*Variável com valor atribuido(cor)*/
+--wall-2: oklch(0.64 0.09 26); /*Variável com valor atribuido(cor)*/ 
+--wall-3: oklch(0.83 0.12 92); /*Variável com valor atribuido(cor)*/
+--wall-4: oklch(0.72 0.1 159); /*Variável com valor atribuido(cor)*/
+--wall-5: oklch(0.77 0.08 351); /*Variável com valor atribuido(cor)*/
+--wall-6: oklch(0.69 0.09 61); /*Variável com valor atribuido(cor)*/
+--shadow-deep: 0 18px 28px oklch(0.14 0.025 50 / 0.38); /* Variável com valor atribuida (tamanho e cor)*/
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-body); }
+* { box-sizing: border-box; } /*Define o modelo de caixa (box model) do elemento como 'border-box' */
+html { scroll-behavior: smooth; }  /*Aplica o comportamento de rolagem ao elemento raiz <html> da página. */
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-body); } /*Define o body da pagina atribuindo valores a variaveis*/
 
-.store-header {
-position: relative;
-overflow: hidden;
-color: var(--paper);
-background: repeating-linear-gradient(90deg, var(--ink) 0 70px, oklch(0.2 0.025 50) 70px 140px);
-border-bottom: 10px solid var(--yellow);
+.store-header { /*Este bloco de código define o estilo do cabeçalho da classe (store-header)*/
+position: relative; /*Transforma o cabeçalho em um ponto de referência de posicionamento.*/
+overflow: hidden; /*Esconde tudo o que tentar "sair" para fora das bordas da caixa do cabeçalho.*/
+color: var(--paper); /*Define a cor do texto do cabeçalho usando uma variável CSS chamada --paper.*/
+background: repeating-linear-gradient(90deg, var(--ink) 0 70px, oklch(0.2 0.025 50) 70px 140px); /* Ela cria um padrão de listras verticais alternadas */
+border-bottom: 10px solid var(--yellow); /* Desenha uma borda bem espessa ($10\text{px}$) e sólida na parte inferior do cabeçalho usando a variável de cor --yellow */
 }
-.store-header::after {
-content: "";
-position: absolute;
-inset: 0;
-opacity: .16;
-background: repeating-linear-gradient(0deg, transparent 0 3px, var(--paper) 3px 4px);
-pointer-events: none;
+.store-header::after { /*::after é um pseudoelemento do CSS que gera uma "caixa extra" virtual logo após o conteúdo do .store-header, sem precisar adicionar nenhuma div extra no seu HTML. */
+content: ""; /*É uma propriedade obrigatória para pseudoelementos. Sem ela, o elemento não é criado na tela.*/
+position: absolute; /*: absolute; Permite sobrepor este pseudoelemento sobre todo o cabeçalho como o pai fica  presa aos limites dele.*/
+inset: 0; /* Estica a camada para ocupar exatamente 100% da largura e da altura do .store-header */
+opacity: .16; /* Define a opacidade do efeito em apenas 16%. */
+background: repeating-linear-gradient(0deg, transparent 0 3px, var(--paper) 3px 4px); 
+/* Cria o efeito de linhas verticais e horizontais de TV ou textura. 
+0deg: O gradiente vai de baixo para cima (criando faixas horizontais),
+transparent 0 3px os primeiros 3px são completamente transparentes,
+A partir de 3px até 4px (uma linha finíssima de apenas 1px de espessura), é desenhada uma linha na cor da variável --paper */
+pointer-events: none; /*Desativa qualquer interação do mouse ou toque com esta camada.*/
 }
-.header-content { width: min(1180px, 92%); min-height: 250px; margin: auto; padding: 42px 0 36px; position: relative; z-index: 1; }
-.logo-lockup { display: flex; align-items: center; gap: 20px; }
+/*Container principal do conteúdo dentro do cabeçalho
+width: Largura responsiva: usa 92% da tela, mas nunca passa de 1180px
+min-height:Garante uma altura mínima para o cabeçalho
+margin: auto Centraliza o container horizontalmente
+padding: 42px 0 36px; Espaçamento interno: 42px topo, 0 laterais, 36px base
+position: relative; Define contexto de posicionamento para o badge e habilita o z-index
+z-index: 1; Garante que este conteúdo fique ACIMA da camada de textura (::after) criada no passo anterior */
+.header-content { width: min(1180px, 92%); min-height: 250px; margin: auto; padding: 42px 0 36px; position: relative; z-index: 1; } 
+/*
+  Agrupamento do logotipo (símbolo + título)
+  display: flex;
+  align-items: center; Alinha o símbolo e o h1 verticalmente no centro 
+  gap: 20px;Espaço de 20px entre o símbolo e o título */
+.logo-lockup { display: flex; align-items: center; gap: 20px; } 
+/*Símbolo ou ícone do logotipo
+Color:var(--yellhow) Cor atribuida a variavel (amarela)
+font-size: clamp(2rem, 5vw, 4rem); Fonte fluida: cresce entre 2rem (mínimo) e 4rem (máximo) dependendo da largura da tela
+letter-spacing: -12px; Junta/aproxima bastante as letras para criar um efeito visual colado
+padding-right: Adiciona um espaço interno de 10px entre o conteúdo do elemento e a sua borda direita */
 .rewind-mark { color: var(--yellow); font-size: clamp(2rem, 5vw, 4rem); letter-spacing: -12px; padding-right: 10px; }
+/*Título principal (H1) dentro do logotipo
+margin:0; Zera a margem externa do elemento em todos os 4 lados (superior, direito, inferior e esquerdo).
+font: 400 clamp(9.6rem, 24vw, 19rem)/.78 var(--font-display); Sintaxe reduzida da propriedade font: weight size/line-height family 
+Cria uma fonte GIGANTE e fluida (entre 9.6rem e 19rem) com altura de linha bem espremida (0.78)
+letter-spacing: 0;Garante que não haverá nenhum espaço extra nem compressão entre os caracteres do texto.
+text-shadow: 6px 6px 0 var(--red); Sombra de texto sólida/dura (sem desfoque), criando um estilo de HQ/retro*/
 .logo-lockup h1 { margin: 0; font: 400 clamp(9.6rem, 24vw, 19rem)/.78 var(--font-display); letter-spacing: 0; text-shadow: 6px 6px 0 var(--red); }
-.logo-lockup h1 span { color: var(--yellow); }
+/*altera a cor do texto de qualquer elemento <span> que esteja dentro de um título h1 cor atribuida a variavel amarelo*/
+.logo-lockup h1 span { color: var(--yellow); } 
+/*Estiliza os parágrafos (<p>) que estão dentro da classe .header-content
+font-size: clamp(.9rem, 2vw, 1.18rem);Tamanho de fonte responsivo: varia entre 0.9rem e 1.18rem conforme a largura da tela
+font-weight: 700; Define o peso da fonte como negrito
+text-transform: uppercase; Transforma automaticamente todas as letras em MAIÚSCULAS
+letter-spacing: .08em; Adiciona um leve espaçamento extra entre as letras (8% do tamanho da fonte)*/
 .header-content p { margin: 26px 0 0; font-size: clamp(.9rem, 2vw, 1.18rem); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+/*Estiliza os elementos <span> que estão especificamente dentro de parágrafos (<p>) do container .header-content
+color: var(--yellow); Define a cor do texto do span usando a variável de cor '--yellow'
+margin: 0 6px; Margem externa: 0 no topo/baixo e 6px nas laterais (esquerda/direita) */
 .header-content p span { color: var(--yellow); margin: 0 6px; }
+/* 
+Estiliza o selo/badge decorativo (.header-badge)
+position: absolute; Posiciona o selo de forma absoluta em relação ao container pai
+right: 0; Cola o selo na borda direita do container
+bottom: 34px; Posiciona o selo a 34px de distância da parte inferior do container
+border: 2px solid var(--paper); Cria uma borda contínua de 2px de espessura com a cor definida na variável '--paper'
+padding: 7px 11px; Espaçamento interno: 7px no topo/baixo e 11px nas laterais
+font: 400 1rem var(--font-display); Sintaxe reduzida da fonte: peso (400 - normal), tamanho (1rem) e família (variável '--font-display')
+letter-spacing: .12em; Espaça os caracteres em 0.12em (12% do tamanho da fonte) para dar destaque
+transform: rotate(-2deg);Rotaciona o selo em 2 graus no sentido anti-horário, criando um efeito levemente 'torto' e estilizado*/
 .header-badge { position: absolute; right: 0; bottom: 34px; border: 2px solid var(--paper); padding: 7px 11px; font: 400 1rem var(--font-display); letter-spacing: .12em; transform: rotate(-2deg); }
-
+/*Barra introdutória / Cabeçalho do Catálogo
+min-height: 54px; Garante uma altura mínima de 54px para a barra, mesmo se estiver quase vazia
+display: flex; Ativa o Flexbox para alinhar e distribuir os elementos filhos lado a lado
+align-items: center; Alinha os itens verticalmente ao centro dentro dos 54px de altura
+justify-content: space-between;Distribui os itens: o primeiro vai para a extrema esquerda e o último para a extrema direita
+gap: 16px; Cria um espaço de segurança de 16px entre os elementos filhos para não colidirem em telas pequenas
+padding: 10px max(4%, calc((100% - 1180px)/2)); Espaçamento interno: 10px em cima/baixo e um cálculo dinâmico e inteligente nas laterais
+background: var(--cream); Cor de fundo usando a variável '--cream' (tom creme/palha)
+border-bottom: 1px dashed var(--ink); Borda inferior pontilhada/tracejada de 1px na cor da variável '--ink'
+font-size: .72rem; Tamanho de fonte pequeno (aproximadamente 11.5px)
+font-weight: 800; Texto em negrito bem encorpado (extra bold)
+letter-spacing: .08em; Espaça levemente os caracteres (8% do tamanho da fonte) para legibilidade em fonte pequena*/
 .catalog-intro { min-height: 54px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px max(4%, calc((100% - 1180px)/2)); background: var(--cream); border-bottom: 1px dashed var(--ink); font-size: .72rem; font-weight: 800; letter-spacing: .08em; }
+/*Estiliza os parágrafos (<p>) que estão dentro da barra .catalog-intro
+margin: 0; Zera a margem externa do parágrafo para que ele fique perfeitamente centralizado na vertical pelo Flexbox pai
+font-weight: 600; Suaviza o peso da fonte de 800 (definido no pai) para 600 (semi-negrito/semi-bold)
+letter-spacing: 0; Reseta o espaçamento entre as letras para o valor padrão (0), removendo o .08em herdado do pai*/
 .catalog-intro p { margin: 0; font-weight: 600; letter-spacing: 0; }
-
+/*Estilização da seção de categorias (.category-section)
+padding: 50px 4% 62px; Espaçamento interno: 50px no topo, 4% nas laterais (responsivo) e 62px na base
+border-bottom: 8px solid color-mix(in oklab, var(--ink) 86%, transparent); Borda inferior espessa (8px) com tom de '--ink' levemente transparente (86% opaco)
+background-color: var(--section-wall); Cor de fundo base da seção usando a variável '--section-wall'
+background-image: radial-gradient(color-mix(in oklab, var(--ink) 12%, transparent) .8px, transparent .8px:Cria um ponto minúsculo (0.8px) com tom de '--ink' suave (12% de opacidade
+background-size: 7px 7px : Define que a textura de pontos se repete em uma grade de 7px por 7px*/
 .category-section { padding: 50px 4% 62px; border-bottom: 8px solid color-mix(in oklab, var(--ink) 86%, transparent); background-color: var(--section-wall); background-image: radial-gradient(color-mix(in oklab, var(--ink) 12%, transparent) .8px, transparent .8px); background-size: 7px 7px; }
+/*Para elementos com a classe .category-1 
+--section-wall: var(--wall-1); Redefine a variável local '--section-wall' para assumir o valor da variável '--wall-1'*/
 .category-1 { --section-wall: var(--wall-1); }
+/*Para elementos com a classe .category-2 
+--section-wall: var(--wall-2); Redefine a variável local '--section-wall' para assumir o valor da variável '--wall-2 */
 .category-2 { --section-wall: var(--wall-2); }
+/*Para elementos com a classe .category-3
+--section-wall: var(--wall-3); Redefine a variável local '--section-wall' para assumir o valor da variável '--wall-3 */
 .category-3 { --section-wall: var(--wall-3); }
+/*Para elementos com a classe .category-4 
+--section-wall: var(--wall-4); Redefine a variável local '--section-wall' para assumir o valor da variável '--wall-4 */
 .category-4 { --section-wall: var(--wall-4); }
+/*Para elementos com a classe .category-5
+--section-wall: var(--wall-5); Redefine a variável local '--section-wall' para assumir o valor da variável '--wall-5 */
 .category-5 { --section-wall: var(--wall-5); }
+/*Para elementos com a classe .category-6
+--section-wall: var(--wall-6); Redefine a variável local '--section-wall' para assumir o valor da variável '--wall-6 */
 .category-6 { --section-wall: var(--wall-6); }
+/*Container interno da seção de categorias (.category-inner)
+width: min(1180px, 100%); Define a largura: ocupa 100% da tela em dispositivos menores, mas nunca ultrapassa 1180px
+margin: auto; Centraliza o container horizontalmente na tela*/
 .category-inner { width: min(1180px, 100%); margin: auto; }
+/*Estilização do cabeçalho da seção de categoria (.category-heading)
+display: flex;Ativa o Flexbox para organizar os elementos filhos (ex: ícone + título) lado a lado
+align-items: center; Alinha os elementos filhos verticalmente no centro da linha
+gap: 13px; Define um espaço de segurança fixo de 13px entre cada elemento filho 
+margin-bottom: 23px; Afasta o cabeçalho em 23px do conteúdo que vem logo abaixo dele (como a grade de produtos)*/
 .category-heading { display: flex; align-items: center; gap: 13px; margin-bottom: 23px; }
 .category-heading > span:first-child { display: grid; place-items: center; width: 42px; height: 42px; flex: none; border-radius: 50%; color: var(--yellow); background: var(--red); border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); }
 .category-heading h2 { margin: 0; font: 400 clamp(2.4rem, 5vw, 4rem)/1 var(--font-display); letter-spacing: 0; text-transform: uppercase; }
