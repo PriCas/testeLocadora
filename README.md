@@ -1,11 +1,7 @@
-﻿# testeLocadora 
+﻿# Projeto Site Locadora Retrô 
+Curso Programador de Sistemas - SENAC
+Disciplina DEVOPS
+Professor Anderson Doneda.
 
-Alteraçãos aqui
+## Criação de página web utilizando HTML + CSS
 
-mais testes
-
-terceiro teste
-
-novo teste
-
-novo testee

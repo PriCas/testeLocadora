@@ -1,20 +1,3 @@
-@@ -0,0 +1,138 @@
-/* Importando "tailwindcss e tw-animate-css"*/
-@import "tailwindcss" source(none);   
-@source "../src";  
-@import "tw-animate-css";   
-
-@theme inline {
---color-background: var(--background); /* Define a cor de fundo usando a variável --background */
---color-foreground: var(--foreground);   /* Define a cor principal do texto/conteúdo usando --foreground */
---color-primary: var(--primary);   /* Define a cor principal da aplicação usando --primary */
---color-primary-foreground: var(--primary-foreground);  /* Define a cor do conteúdo que aparece sobre a cor principal */
---color-muted: var(--muted);   /* Define uma cor mais discreta/secundária */
---color-muted-foreground: var(--muted-foreground);    /* Define a cor do texto usado sobre elementos discretos */
---color-border: var(--border);  /* Define a cor das bordas */
---font-display: "Bebas Neue", sans-serif;   /* Define a fonte usada para títulos/destaques */
---font-body: "Work Sans", sans-serif;  /* Define a fonte usada para textos comuns */
-}
 
 /*Funcionam com variaveis globais podendo ser chamada no codigo inteiro*/
 :root {
@@ -163,6 +146,7 @@ background-size: 7px 7px : Define que a textura de pontos se repete em uma grade
 /*Container interno da seção de categorias (.category-inner)
 width: min(1180px, 100%); Define a largura: ocupa 100% da tela em dispositivos menores, mas nunca ultrapassa 1180px
 margin: auto; Centraliza o container horizontalmente na tela*/
+.category-7 { --section-wall: var(--wall-7); }
 .category-inner { width: min(1180px, 100%); margin: auto; }
 /*Estilização do cabeçalho da seção de categoria (.category-heading)
 display: flex;Ativa o Flexbox para organizar os elementos filhos (ex: ícone + título) lado a lado
@@ -191,8 +175,9 @@ margin-bottom: 23px; Afasta o cabeçalho em 23px do conteúdo que vem logo abaix
 .movie-info h3 { margin: 0 0 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 400 1.18rem/1 var(--font-display); letter-spacing: .015em; }
 .movie-meta { display: flex; justify-content: space-between; align-items: center; gap: 5px; color: var(--muted); font-size: .63rem; font-weight: 800; }
 .format-badge { padding: 2px 5px; color: var(--ink); background: var(--paper); white-space: nowrap; }
+.price-badge {padding: 2px 8px; color: var(--ink); background: var(--paper); white-space: nowrap; font-size: 0.85rem; font-weight: 900;}
 .vhs-label-strip { padding: 5px 7px; color: var(--ink); background: var(--yellow); border-top: 2px solid var(--ink); font: 800 .55rem var(--font-body); text-align: center; letter-spacing: .06em; }
-
+.vhs-sticker {position: absolute; z-index: 2; right: 6px; top: 7px; padding: 4px 6px; color: var(--ink); background: var(--yellow); border: 1px solid var(--ink); font-size: 0.55rem; font-weight: 900; text-transform: uppercase; transform: rotate(3deg); box-shadow: 2px 2px 0 var(--ink);}
 footer { color: var(--paper); background: var(--ink); border-top: 12px solid var(--yellow); }
 .footer-container { width: min(1180px, 92%); margin: auto; padding: 42px 0 28px; display: grid; grid-template-columns: 1fr 2fr; gap: 20px; align-items: center; }
 .footer-logo { color: var(--yellow); font: 400 4rem/1 var(--font-display); text-shadow: 3px 3px 0 var(--red); }
@@ -204,7 +189,6 @@ footer { color: var(--paper); background: var(--ink); border-top: 12px solid var
 .grid-movies { grid-template-columns: repeat(5, 170px); overflow-x: auto; overflow-y: visible; min-height: 360px; padding-inline: 16px; scrollbar-color: var(--yellow) var(--wood-dark); }
 .movie-card { height: 302px; }
 .shelf { padding-inline: 8px; }
-.header-badge { position: static; display: inline-block; margin-top: 24px; }
 }
 @media (max-width: 600px) {
 .header-content { min-height: 220px; padding-top: 36px; }
@@ -225,3 +209,4 @@ footer { color: var(--paper); background: var(--ink); border-top: 12px solid var
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
