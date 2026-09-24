@@ -1,24 +1,37 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>LocaTech | Clássicos em VHS e DVD</title>
+<!-- Define o tipo de documento como HTML5, informando ao navegador como interpretar a página -->
+<!DOCTYPE html>  
+<!-- Tag raiz do documento HTML. O atributo lang="pt-BR" especifica que o conteúdo principal está em português do Brasil Acessibilidade e SEO: O uso de lang="pt-BR" ajuda leitores de tela para pessoas com deficiência visual a pronunciarem as palavras corretamente --> 
+<html lang="pt-BR"> 
+<!-- Cabeçalho do documento: contém metadados, links para estilos e informações não visíveis na página -->
+<head> 
+<!-- Define o conjunto de caracteres como UTF-8, garantindo suporte a acentos (ç, á, é, etc.) e caracteres especiais -->
+<meta charset="UTF-8" /> 
+<!-- Configura a viewport para responsividade, fazendo com que a página se adapte largura da tela do dispositivo (como celulares) com escala inicial 1.0 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+<!-- Define o título da página que aparece na aba do navegador e nos resultados de busca -->
+<title>LocaTech | Clássicos em VHS e DVD</title> 
+<!-- Descrição da página para motores de busca (SEO), resumindo o conteúdo do site nos resultados do Google -->
 <meta name="description" content="Catálogo retrô da LocaTech com clássicos em VHS e DVD organizados por gênero." />
+<!-- Importa o arquivo de estilo externo (CSS) chamado "loctech-estilos.css" para estilizar o layout da página -->
 <link rel="stylesheet" href="loctech-estilos.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com"><!--inicio logo grande-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
 <!--final logo grande-->
 </head>
+<!-- Início do corpo do documento, onde fica todo o conteúdo visível para o usuário -->
 <body>
+<!-- Divisão genérica (container) com a classe "site-shell", frequentemente usada na arquitetura CSS para envelopar todo o layout e aplicar limites de largura ou centralização na tela -->
 <div class="site-shell">
-
+    <!-- Tag estrutural HTML5 para o cabeçalho do site, identificada pela classe "store-header" para estilização CSS -->
     <header class="store-header">
         <div class="header-content">
         <div class="logo-lockup">
+        <!-- Elemento visual decorativo (símbolo de rebobinar ◀◀). O atributo aria-hidden="true" faz com que leitores de tela para pessoas com deficiência visual ignorem o símbolo, evitando leituras confusas -->
         <span class="rewind-mark" aria-hidden="true">◀◀</span>
+        <!-- Título principal da página (H1). A tag <span> na palavra "TECH" permite aplicar uma cor ou estilo diferente só nessa metade da palavra via CSS -->
         <h1>LOCA<span>TECH</span></h1>
+        <!-- Fechamento da div do logotipo -->
         </div>
         <p>A sua locadora de vídeos digital. <span>•</span> Reviva os clássicos</p>
         <div class="header-badge">HI-FI STEREO / VHS & DVD</div>
@@ -26,6 +39,7 @@
     </header>
     
     <main>
+        <!-- Container da seção de introdução/informações rápidas do catálogo -->
         <div class="catalog-intro">
         <span>CATÁLOGO Nº 09/26</span>
         <p>Passe o mouse nas fitas para ver os detalhes</p>
@@ -55,6 +69,8 @@
         </div>
         <div class="vhs-label-strip">TAPE-01 · SCI-FI</div>
         </article>
+
+    <!-- Filme Ficção Científica De Volta para o Futuro III -->
         <article class="movie-card" tabindex="0" aria-label="De Volta para o Futuro III, 1990, VHS">
         <div class="poster-container">
         <span class="vhs-sticker">Disponível</span>
@@ -69,6 +85,8 @@
         </div>
         <div class="vhs-label-strip">TAPE-02 · SCI-FI</div>
         </article>
+
+    <!-- Filme Ficção Científica O Exterminador do Futuro 2 -->
         <article class="movie-card" tabindex="0" aria-label="O Exterminador do Futuro 2, 1991, VHS / DVD">
         <div class="poster-container">
         <span class="vhs-sticker">Disponível</span>
@@ -83,6 +101,8 @@
         </div>
         <div class="vhs-label-strip">TAPE-03 · SCI-FI</div>
         </article>
+
+    <!-- Filme Ficção Científica Jurassic Park -->
         <article class="movie-card" tabindex="0" aria-label="Jurassic Park, 1993, VHS / DVD">
         <div class="poster-container">
         <span class="vhs-sticker">Disponível</span>
@@ -97,6 +117,8 @@
         </div>
         <div class="vhs-label-strip">TAPE-04 · SCI-FI</div>
         </article>
+
+    <!-- Filme Ficção Científica Homens de Preto -->
         <article class="movie-card" tabindex="0" aria-label="Homens de Preto, 1997, VHS">
         <div class="poster-container">
         <span class="vhs-sticker">Disponível</span>
@@ -116,6 +138,7 @@
         </div>
     </section>
 
+    <!-- Filmes de Terror -->
     <section class="category-section category-2">
         <div class="category-inner">
         <div class="category-heading">
@@ -139,6 +162,8 @@
         </div>
         <div class="vhs-label-strip">TAPE-06 · TERROR</div>
         </article>
+    
+    <!-- Filme Terror O Sexto Sentido -->
         <article class="movie-card" tabindex="0" aria-label="O Sexto Sentido, 1999, VHS / DVD">
         <div class="poster-container">
         <span class="vhs-sticker">Disponível</span>
@@ -153,6 +178,8 @@
         </div>
         <div class="vhs-label-strip">TAPE-07 · TERROR</div>
         </article>
+
+    <!-- Filme Terror A Bruxa de Blair -->
         <article class="movie-card" tabindex="0" aria-label="A Bruxa de Blair, 1999, VHS">
         <div class="poster-container">
         <span class="vhs-sticker">Disponível</span>
@@ -167,6 +194,8 @@
         </div>
         <div class="vhs-label-strip">TAPE-08 · TERROR</div>
         </article>
+
+    <!-- Filme Terror O Chamado -->
         <article class="movie-card" tabindex="0" aria-label="O Chamado, 2002, DVD / VHS">
         <div class="poster-container">
         <span class="vhs-sticker">Disponível</span>
@@ -181,6 +210,8 @@
         </div>
         <div class="vhs-label-strip">TAPE-09 · TERROR</div>
         </article>
+
+    <!-- Filme Terror Jogos Mortais -->
         <article class="movie-card" tabindex="0" aria-label="Jogos Mortais, 2004, DVD">
         <div class="poster-container">
         <span class="vhs-sticker">Disponível</span>
@@ -200,6 +231,7 @@
         </div>
     </section>
 
+    <!-- Filmes de Comédia -->
     <section class="category-section category-3">
         <div class="category-inner">
         <div class="category-heading">
@@ -209,6 +241,8 @@
         </div>
         <div class="shelf">
             <div class="grid-movies">
+
+    <!-- Filme Comédia Debi & Lóide -->
         <article class="movie-card" tabindex="0" aria-label="Debi & Lóide, 1994, VHS">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -223,6 +257,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-11 · COMÉDIA</div>
         </article>
+
+    <!-- Filme Comédia As Branquelas -->
         <article class="movie-card" tabindex="0" aria-label="As Branquelas, 2004, DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -237,6 +273,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-12 · COMÉDIA</div>
         </article>
+
+    <!-- Filme Comédia O Maskara -->
         <article class="movie-card" tabindex="0" aria-label="O Maskara, 1994, VHS / DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -251,6 +289,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-13 · COMÉDIA</div>
         </article>
+
+    <!-- Filme Comédia A Hora do Rush -->
         <article class="movie-card" tabindex="0" aria-label="A Hora do Rush, 1998, VHS">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -265,6 +305,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-14 · COMÉDIA</div>
         </article>
+
+    <!-- Filme Comédia Todo Mundo em Pânico -->
         <article class="movie-card" tabindex="0" aria-label="Todo Mundo em Pânico, 2000, VHS / DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -284,6 +326,7 @@
         </div>
     </section>
 
+    <!-- Filmes Infantil/Animação -->
     <section class="category-section category-4">
         <div class="category-inner">
         <div class="category-heading">
@@ -293,6 +336,8 @@
         </div>
         <div class="shelf">
             <div class="grid-movies">
+
+    <!-- Filme Infantil/Animação O Rei Leão -->
         <article class="movie-card" tabindex="0" aria-label="O Rei Leão, 1994, VHS / DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -307,6 +352,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-16 · INFANTIL</div>
         </article>
+
+    <!-- Filme Infantil/Animação Toy Story -->
         <article class="movie-card" tabindex="0" aria-label="Toy Story, 1995, VHS">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -321,6 +368,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-17 · INFANTIL</div>
         </article>
+
+    <!-- Filme Infantil/Animação Shrek -->
         <article class="movie-card" tabindex="0" aria-label="Shrek, 2001, VHS / DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -335,6 +384,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-18 · INFANTIL</div>
         </article>
+
+    <!-- Filme Infantil/Animação Procurando Nemo -->
         <article class="movie-card" tabindex="0" aria-label="Procurando Nemo, 2003, DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -349,6 +400,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-19 · INFANTIL</div>
         </article>
+
+    <!-- Filme Infantil/Animação Monstros SA -->
         <article class="movie-card" tabindex="0" aria-label="Monstros S.A., 2001, VHS / DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -368,6 +421,7 @@
         </div>
     </section>
 
+    <!-- Filmes de Romance -->
     <section class="category-section category-5">
         <div class="category-inner">
         <div class="category-heading">
@@ -377,6 +431,8 @@
         </div>
         <div class="shelf">
             <div class="grid-movies">
+        
+        <!-- Filme Romance Titanic -->
         <article class="movie-card" tabindex="0" aria-label="Titanic, 1997, 2-VHS / DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -391,6 +447,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-21 · ROMANCE</div>
         </article>
+
+    <!-- Filme Romance 10 coisas que eu odeio em você -->
         <article class="movie-card" tabindex="0" aria-label="10 Coisas que Eu Odeio em Você, 1999, VHS">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -405,6 +463,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-22 · ROMANCE</div>
         </article>
+
+    <!-- Filme Romance Ghost: Do Outro Lado da Vida -->
         <article class="movie-card" tabindex="0" aria-label="Ghost: Do Outro Lado da Vida, 1990, VHS">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -419,6 +479,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-23 · ROMANCE</div>
         </article>
+    
+    <!-- Filme Romance Diário de uma paixão -->
         <article class="movie-card" tabindex="0" aria-label="Diário de uma Paixão, 2004, DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -433,6 +495,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-24 · ROMANCE</div>
         </article>
+
+    <!-- Filme Romance Uma linda mulher -->
         <article class="movie-card" tabindex="0" aria-label="Uma Linda Mulher, 1990, VHS">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -452,6 +516,7 @@
         </div>
     </section>
 
+    <!-- Filmes de Ação -->
     <section class="category-section category-6">
         <div class="category-inner">
         <div class="category-heading">
@@ -461,6 +526,8 @@
         </div>
         <div class="shelf">
             <div class="grid-movies">
+
+        <!-- Filme Ação Pulp Fiction -->
         <article class="movie-card" tabindex="0" aria-label="Pulp Fiction, 1994, VHS / DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -475,6 +542,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-26 · AÇÃO</div>
         </article>
+
+        <!-- Filme Ação Gladiador -->
         <article class="movie-card" tabindex="0" aria-label="Gladiador, 2000, DVD / VHS">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -489,6 +558,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-27 · AÇÃO</div>
         </article>
+
+        <!-- Filme O Senhor dos Anéis -->
         <article class="movie-card" tabindex="0" aria-label="O Senhor dos Anéis, 2001, DVD / VHS">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -503,6 +574,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-28 · AÇÃO</div>
         </article>
+
+        <!-- Filme Ação Velozes e Furiosos -->
         <article class="movie-card" tabindex="0" aria-label="Velozes e Furiosos, 2001, VHS / DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
@@ -517,6 +590,8 @@
             </div>
             <div class="vhs-label-strip">TAPE-29 · AÇÃO</div>
         </article>
+
+        <!-- Filme Ação Piratas do Caribe -->
         <article class="movie-card" tabindex="0" aria-label="Piratas do Caribe, 2003, DVD">
             <div class="poster-container">
             <span class="vhs-sticker">Disponível</span>
