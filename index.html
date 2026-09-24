@@ -14,7 +14,10 @@
 <meta name="description" content="Catálogo retrô da LocaTech com clássicos em VHS e DVD organizados por gênero." />
 <!-- Importa o arquivo de estilo externo (CSS) chamado "loctech-estilos.css" para estilizar o layout da página -->
 <link rel="stylesheet" href="loctech-estilos.css" />
-<!-- Fechamento do cabeçalho -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><!--inicio logo grande-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+<!--final logo grande-->
 </head>
 <!-- Início do corpo do documento, onde fica todo o conteúdo visível para o usuário -->
 <body>
@@ -22,9 +25,7 @@
 <div class="site-shell">
     <!-- Tag estrutural HTML5 para o cabeçalho do site, identificada pela classe "store-header" para estilização CSS -->
     <header class="store-header">
-    <!-- Container interno para agrupar e centralizar o conteúdo do cabeçalho -->
-    <div class="header-content">
-        <!-- Container do logotipo, agrupando o ícone retrô e o nome da marca -->
+        <div class="header-content">
         <div class="logo-lockup">
         <!-- Elemento visual decorativo (símbolo de rebobinar ◀◀). O atributo aria-hidden="true" faz com que leitores de tela para pessoas com deficiência visual ignorem o símbolo, evitando leituras confusas -->
         <span class="rewind-mark" aria-hidden="true">◀◀</span>
@@ -32,133 +33,107 @@
         <h1>LOCA<span>TECH</span></h1>
         <!-- Fechamento da div do logotipo -->
         </div>
-        <!-- Parágrafo de slogans ou descrição rápida. A tag <span> no ponto central (•) permite ajustar o espaçamento ou cor desse separador via CSS -->
-        <p>A sua locadora de vídeos digital <span>•</span> Reviva os clássicos</p>
-        <!-- Selo ou distintivo estilizado (badge). O trecho &amp; é a entidade HTML segura para exibir o caractere "e comercial" (&) sem quebrar o código -->
-        <div class="header-badge">HI-FI STEREO / VHS &amp; DVD</div>
-    </div> <!-- Fechamento do container do conteúdo do cabeçalho -->
-    </header> <!-- Fechamento do cabeçalho da loja -->
-    <!-- Tag estrutural HTML5 que delimita o conteúdo principal e exclusivo desta página -->
+        <p>A sua locadora de vídeos digital. <span>•</span> Reviva os clássicos</p>
+        <div class="header-badge">HI-FI STEREO / VHS & DVD</div>
+        </div>
+    </header>
+    
     <main>
         <!-- Container da seção de introdução/informações rápidas do catálogo -->
         <div class="catalog-intro">
-            <!-- Exibe uma informação de rodapé/cabeçalho da loja (número/mês da edição do catálogo) -->
-            <span>CATÁLOGO Nº 09/26</span>
-            <!-- Parágrafo com instruções de interação para o usuário -->
-            <p>Passe o mouse nas fitas para ver os detalhes</p>
-            <!-- Exibe a quantidade total de títulos disponíveis no catálogo -->
-            <span>30 TÍTULOS</span>
-            </div> <!-- Fechamento do container de introdução do catálogo -->
-            <!-- Seção que agrupa os filmes de uma categoria específica. Usa duas classes CSS: uma genérica ("category-section") e uma específica ("category-1") -->
-            <section class="category-section category-1">
-            <!-- Container interno da categoria para aplicação de padding, margens ou limites de largura -->
-            <div class="category-inner">
-            <!-- Container do cabeçalho da categoria (ícone, nome do gênero e identificador) -->
-            <div class="category-heading">
-            <!-- Ícone decorativo de estrela (★). O atributo aria-hidden="true" impede que leitores de tela leiam "estrela" de forma desnecessária -->
-            <span aria-hidden="true">★</span>
-            <!-- Título de nível 2 que define o nome da categoria/gênero nesta seção -->
-            <h2>Ficção Científica</h2>
-            <!-- Elemento visual temático simulando a localização física na locadora ("CORREDOR 01") -->
-            <span class="aisle-number">CORREDOR 01</span>
-            </div>
-            <!-- Representação visual da "prateleira" de filmes -->
-            <div class="shelf">
-            <!-- Container em grade (CSS Grid) para organizar os cards dos filmes em colunas -->
-            <div class="grid-movies">
-            <!-- Tag semântica <article> que delimita o card individual de um filme. 
-            - tabindex="0" torna o card focável via teclado (tecla Tab) para acessibilidade.
-            - aria-label fornece uma descrição completa e resumida do card para leitores de tela -->
-            <article class="movie-card" tabindex="0" aria-label="Matrix, 1999, VHS / DVD">
-            <!-- Container da imagem da capa e seus adesivos/sobreposições -->
-                <div class="poster-container">
-                <!-- Elemento que simula um adesivo físico colado na fita VHS (ex: "Disponível") -->
-                <span class="vhs-sticker">Disponível</span>
-                <!-- Imagem do pôster do filme:
-                - src: link da imagem no TMDB.
-                - alt: texto alternativo para leitores de tela e caso a imagem não carregue.
-                - loading="lazy": carregamento diferido, melhorando a performance ao carregar a imagem apenas quando ela entra na tela -->
-                <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg" alt="Capa de Matrix" loading="lazy" />
-            </div>
-            <!-- Container com as informações textuais do filme -->
-            <div class="movie-info">
-                <!-- Título de nível 3 com o nome do filme -->
-                <h3>Matrix</h3>
-                <!-- Container para os metadados do filme (ano e mídia) -->
-                <div class="movie-meta">
-                <!-- Exibe o ano de lançamento -->
-                <span>1999</span>
-                <!-- Badge/selo estilizado indicando os formatos disponíveis (VHS / DVD) -->
-                <span class="format-badge">VHS / DVD</span>
-                </div>
-            </div>
-            <div class="vhs-label-strip">TAPE-01 · SCI-FI</div>
+        <span>CATÁLOGO Nº 09/26</span>
+        <p>Passe o mouse nas fitas para ver os detalhes</p>
+        <span>30 TÍTULOS</span>
+        </div>
+    
+        <section class="category-section category-1">
+        <div class="category-inner">
+        <div class="category-heading">
+        <span aria-hidden="true">★</span>
+        <h2>Ficção Científica</h2>
+        <span class="aisle-number">CORREDOR 01</span>
+        </div>
+        <div class="shelf">
+        <div class="grid-movies">
+        <article class="movie-card" tabindex="0" aria-label="Matrix, 1999, VHS / DVD">
+        <div class="poster-container">
+        <span class="vhs-sticker">Disponível</span>
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg" alt="Capa de Matrix" loading="lazy" />
+        </div>
+        <div class="movie-info">
+        <h3>Matrix</h3>
+        <div class="movie-meta">
+        <span>1999</span>
+        <span class="format-badge">VHS / DVD</span>
+        </div>
+        </div>
+        <div class="vhs-label-strip">TAPE-01 · SCI-FI</div>
         </article>
 
     <!-- Filme Ficção Científica De Volta para o Futuro III -->
         <article class="movie-card" tabindex="0" aria-label="De Volta para o Futuro III, 1990, VHS">
-            <div class="poster-container">
-            <span class="vhs-sticker">Disponível</span>
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/unnPJBVNTRDYuBgAdETlyLJ6hP9.jpg" alt="Capa de De Volta para o Futuro III" loading="lazy" />
-            </div>
-            <div class="movie-info">
-            <h3>De Volta para o Futuro III</h3>
-            <div class="movie-meta">
-                <span>1990</span>
-                <span class="format-badge">VHS</span>
-            </div>
-            </div>
-            <div class="vhs-label-strip">TAPE-02 · SCI-FI</div>
+        <div class="poster-container">
+        <span class="vhs-sticker">Disponível</span>
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/unnPJBVNTRDYuBgAdETlyLJ6hP9.jpg" alt="Capa de De Volta para o Futuro III" loading="lazy" />
+        </div>
+        <div class="movie-info">
+        <h3>De Volta para o Futuro III</h3>
+        <div class="movie-meta">
+        <span>1990</span>
+        <span class="format-badge">VHS</span>
+        </div>
+        </div>
+        <div class="vhs-label-strip">TAPE-02 · SCI-FI</div>
         </article>
 
     <!-- Filme Ficção Científica O Exterminador do Futuro 2 -->
         <article class="movie-card" tabindex="0" aria-label="O Exterminador do Futuro 2, 1991, VHS / DVD">
-            <div class="poster-container">
-            <span class="vhs-sticker">Disponível</span>
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/nb0ertLALhkUqpmcahDFplqyc0I.jpg" alt="Capa de O Exterminador do Futuro 2" loading="lazy" />
-            </div>
-            <div class="movie-info">
-            <h3>O Exterminador do Futuro 2</h3>
-            <div class="movie-meta">
-                <span>1991</span>
-                <span class="format-badge">VHS / DVD</span>
-            </div>
-            </div>
-            <div class="vhs-label-strip">TAPE-03 · SCI-FI</div>
+        <div class="poster-container">
+        <span class="vhs-sticker">Disponível</span>
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/nb0ertLALhkUqpmcahDFplqyc0I.jpg" alt="Capa de O Exterminador do Futuro 2" loading="lazy" />
+        </div>
+        <div class="movie-info">
+        <h3>O Exterminador do Futuro 2</h3>
+        <div class="movie-meta">
+        <span>1991</span>
+        <span class="format-badge">VHS / DVD</span>
+        </div>
+        </div>
+        <div class="vhs-label-strip">TAPE-03 · SCI-FI</div>
         </article>
 
     <!-- Filme Ficção Científica Jurassic Park -->
         <article class="movie-card" tabindex="0" aria-label="Jurassic Park, 1993, VHS / DVD">
-            <div class="poster-container">
-            <span class="vhs-sticker">Disponível</span>
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/mgjJ7FH4V3exsmoHwXrmsUhn0h1.jpg" alt="Capa de Jurassic Park" loading="lazy" />
-            </div>
-            <div class="movie-info">
-            <h3>Jurassic Park</h3>
-            <div class="movie-meta">
-                <span>1993</span>
-                <span class="format-badge">VHS / DVD</span>
-            </div>
-            </div>
-            <div class="vhs-label-strip">TAPE-04 · SCI-FI</div>
+        <div class="poster-container">
+        <span class="vhs-sticker">Disponível</span>
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/mgjJ7FH4V3exsmoHwXrmsUhn0h1.jpg" alt="Capa de Jurassic Park" loading="lazy" />
+        </div>
+        <div class="movie-info">
+        <h3>Jurassic Park</h3>
+        <div class="movie-meta">
+        <span>1993</span>
+        <span class="format-badge">VHS / DVD</span>
+        </div>
+        </div>
+        <div class="vhs-label-strip">TAPE-04 · SCI-FI</div>
         </article>
 
     <!-- Filme Ficção Científica Homens de Preto -->
         <article class="movie-card" tabindex="0" aria-label="Homens de Preto, 1997, VHS">
-            <div class="poster-container">
-            <span class="vhs-sticker">Disponível</span>
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/sVBYUN1yG5IxDoBBrw2ujaXzhsX.jpg" alt="Capa de Homens de Preto" loading="lazy" />
-            </div>
-            <div class="movie-info">
-            <h3>Homens de Preto</h3>
-            <div class="movie-meta">
-                <span>1997</span>
-                <span class="format-badge">VHS</span>
-            </div>
-            </div>
-            <div class="vhs-label-strip">TAPE-05 · SCI-FI</div>
+        <div class="poster-container">
+        <span class="vhs-sticker">Disponível</span>
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/sVBYUN1yG5IxDoBBrw2ujaXzhsX.jpg" alt="Capa de Homens de Preto" loading="lazy" />
+        </div>
+        <div class="movie-info">
+        <h3>Homens de Preto</h3>
+        <div class="movie-meta">
+        <span>1997</span>
+        <span class="format-badge">VHS</span>
+        </div>
+        </div>
+        <div class="vhs-label-strip">TAPE-05 · SCI-FI</div>
         </article>
-            </div>
+        </div>
         </div>
         </div>
     </section>
@@ -167,93 +142,91 @@
     <section class="category-section category-2">
         <div class="category-inner">
         <div class="category-heading">
-            <span aria-hidden="true">★</span>
-            <h2>Terror / Thriller</h2>
-            <span class="aisle-number">CORREDOR 02</span>
+        <span aria-hidden="true">★</span>
+        <h2>Terror / Thriller</h2>
+        <span class="aisle-number">CORREDOR 02</span>
         </div>
         <div class="shelf">
-            <div class="grid-movies">
-
-    <!-- Filme Terror Pânico -->
+        <div class="grid-movies">
         <article class="movie-card" tabindex="0" aria-label="Pânico, 1996, VHS">
-            <div class="poster-container">
-            <span class="vhs-sticker">Disponível</span>
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/fxvIgISXTL54whqSVXc9vD7iLNi.jpg" alt="Capa de Pânico" loading="lazy" />
-            </div>
-            <div class="movie-info">
-            <h3>Pânico</h3>
-            <div class="movie-meta">
-                <span>1996</span>
-                <span class="format-badge">VHS</span>
-            </div>
-            </div>
-            <div class="vhs-label-strip">TAPE-06 · TERROR</div>
+        <div class="poster-container">
+        <span class="vhs-sticker">Disponível</span>
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/fxvIgISXTL54whqSVXc9vD7iLNi.jpg" alt="Capa de Pânico" loading="lazy" />
+        </div>
+        <div class="movie-info">
+        <h3>Pânico</h3>
+        <div class="movie-meta">
+        <span>1996</span>
+        <span class="format-badge">VHS</span>
+        </div>
+        </div>
+        <div class="vhs-label-strip">TAPE-06 · TERROR</div>
         </article>
     
     <!-- Filme Terror O Sexto Sentido -->
         <article class="movie-card" tabindex="0" aria-label="O Sexto Sentido, 1999, VHS / DVD">
-            <div class="poster-container">
-            <span class="vhs-sticker">Disponível</span>
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/vaghZWWBamw5vcyUyzFScWlIr1J.jpg" alt="Capa de O Sexto Sentido" loading="lazy" />
-            </div>
-            <div class="movie-info">
-            <h3>O Sexto Sentido</h3>
-            <div class="movie-meta">
-                <span>1999</span>
-                <span class="format-badge">VHS / DVD</span>
-            </div>
-            </div>
-            <div class="vhs-label-strip">TAPE-07 · TERROR</div>
+        <div class="poster-container">
+        <span class="vhs-sticker">Disponível</span>
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/vaghZWWBamw5vcyUyzFScWlIr1J.jpg" alt="Capa de O Sexto Sentido" loading="lazy" />
+        </div>
+        <div class="movie-info">
+        <h3>O Sexto Sentido</h3>
+        <div class="movie-meta">
+        <span>1999</span>
+        <span class="format-badge">VHS / DVD</span>
+        </div>
+        </div>
+        <div class="vhs-label-strip">TAPE-07 · TERROR</div>
         </article>
 
     <!-- Filme Terror A Bruxa de Blair -->
         <article class="movie-card" tabindex="0" aria-label="A Bruxa de Blair, 1999, VHS">
-            <div class="poster-container">
-            <span class="vhs-sticker">Disponível</span>
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/AuRS2V8LHF1aKJUUQdVzyCm9afs.jpg" alt="Capa de A Bruxa de Blair" loading="lazy" />
-            </div>
-            <div class="movie-info">
-            <h3>A Bruxa de Blair</h3>
-            <div class="movie-meta">
-                <span>1999</span>
-                <span class="format-badge">VHS</span>
-            </div>
-            </div>
-            <div class="vhs-label-strip">TAPE-08 · TERROR</div>
+        <div class="poster-container">
+        <span class="vhs-sticker">Disponível</span>
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/AuRS2V8LHF1aKJUUQdVzyCm9afs.jpg" alt="Capa de A Bruxa de Blair" loading="lazy" />
+        </div>
+        <div class="movie-info">
+        <h3>A Bruxa de Blair</h3>
+        <div class="movie-meta">
+        <span>1999</span>
+        <span class="format-badge">VHS</span>
+        </div>
+        </div>
+        <div class="vhs-label-strip">TAPE-08 · TERROR</div>
         </article>
 
     <!-- Filme Terror O Chamado -->
         <article class="movie-card" tabindex="0" aria-label="O Chamado, 2002, DVD / VHS">
-            <div class="poster-container">
-            <span class="vhs-sticker">Disponível</span>
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/4skN151KEKtJQSLJ7zkWSDGE0DJ.jpg" alt="Capa de O Chamado" loading="lazy" />
-            </div>
-            <div class="movie-info">
-            <h3>O Chamado</h3>
-            <div class="movie-meta">
-                <span>2002</span>
-                <span class="format-badge">DVD / VHS</span>
-            </div>
-            </div>
-            <div class="vhs-label-strip">TAPE-09 · TERROR</div>
+        <div class="poster-container">
+        <span class="vhs-sticker">Disponível</span>
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/4skN151KEKtJQSLJ7zkWSDGE0DJ.jpg" alt="Capa de O Chamado" loading="lazy" />
+        </div>
+        <div class="movie-info">
+        <h3>O Chamado</h3>
+        <div class="movie-meta">
+        <span>2002</span>
+        <span class="format-badge">DVD / VHS</span>
+        </div>
+        </div>
+        <div class="vhs-label-strip">TAPE-09 · TERROR</div>
         </article>
 
     <!-- Filme Terror Jogos Mortais -->
         <article class="movie-card" tabindex="0" aria-label="Jogos Mortais, 2004, DVD">
-            <div class="poster-container">
-            <span class="vhs-sticker">Disponível</span>
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/7EPDYnjcy4cP4Ldy3qFApySOdNh.jpg" alt="Capa de Jogos Mortais" loading="lazy" />
-            </div>
-            <div class="movie-info">
-            <h3>Jogos Mortais</h3>
-            <div class="movie-meta">
-                <span>2004</span>
-                <span class="format-badge">DVD</span>
-            </div>
-            </div>
-            <div class="vhs-label-strip">TAPE-10 · TERROR</div>
+        <div class="poster-container">
+        <span class="vhs-sticker">Disponível</span>
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/7EPDYnjcy4cP4Ldy3qFApySOdNh.jpg" alt="Capa de Jogos Mortais" loading="lazy" />
+        </div>
+        <div class="movie-info">
+        <h3>Jogos Mortais</h3>
+        <div class="movie-meta">
+        <span>2004</span>
+        <span class="format-badge">DVD</span>
+        </div>
+        </div>
+        <div class="vhs-label-strip">TAPE-10 · TERROR</div>
         </article>
-            </div>
+        </div>
         </div>
         </div>
     </section>
@@ -652,7 +625,7 @@
             <article class="movie-card" tabindex="0" aria-label="Caneca As Branquelas, R$ 49,90, à venda">
                 <div class="poster-container">
                 <span class="vhs-sticker">À venda</span>
-                <img class="movie-poster" src="imagens/caneca as branquelas.jpg" alt="Caneca personalizada do filme As Branquelas" loading="lazy">
+                <img class="movie-poster" src="images/caneca-as-branquelas.jpg" alt="Caneca personalizada do filme As Branquelas" loading="lazy">
                 </div>
                 <div class="movie-info">
                 <h3>Caneca As Branquelas</h3>
@@ -667,7 +640,7 @@
             <article class="movie-card" tabindex="0" aria-label="Chaveiro Exterminador do Futuro, R$ 19,90, à venda">
                 <div class="poster-container">
                 <span class="vhs-sticker">À venda</span>
-                <img class="movie-poster" src="imagens/chaveiro-exterminador.jpg" alt="Chaveiro temático do filme O Exterminador do Futuro" loading="lazy">
+                <img class="movie-poster" src="images/chaveiro-exterminador-do-futuro.jpg" alt="Chaveiro temático do filme O Exterminador do Futuro" loading="lazy">
                 </div>
                 <div class="movie-info">
                 <h3>Chaveiro Exterminador do Futuro</h3>
@@ -682,7 +655,7 @@
             <article class="movie-card" tabindex="0" aria-label="Camiseta Jurassic Park, R$ 89,90, à venda">
                 <div class="poster-container">
                 <span class="vhs-sticker">À venda</span>
-                <img class="movie-poster" src="imagens/camiseta-jurassic-park.jpg" alt="Camiseta do filme Jurassic Park" loading="lazy">
+                <img class="movie-poster" src="images/camisa-jurassic-park.jpg" alt="Camiseta do filme Jurassic Park" loading="lazy">
                 </div>
                 <div class="movie-info">
                 <h3>Camiseta Jurassic Park</h3>
@@ -697,7 +670,7 @@
             <article class="movie-card" tabindex="0" aria-label="Miniatura Matrix, R$ 129,90, à venda">
                 <div class="poster-container">
                 <span class="vhs-sticker">À venda</span>
-                <img class="movie-poster" src="imagens/miniatura-matrix.jpg" alt="Miniatura de personagem do filme Matrix" loading="lazy">
+                <img class="movie-poster" src="images/miniaturas-matrix.jpg" alt="Miniatura de personagem do filme Matrix" loading="lazy">
                 </div>
                 <div class="movie-info">
                 <h3>Miniatura Matrix</h3>
@@ -712,7 +685,7 @@
             <article class="movie-card" tabindex="0" aria-label="Meias Monstros S.A., R$ 29,90, à venda">
                 <div class="poster-container">
                 <span class="vhs-sticker">À venda</span>
-                <img class="movie-poster" src="imagens/meias-monstros-sa.jpg" alt="Meias temáticas do filme Monstros S.A." loading="lazy">
+                <img class="movie-poster" src="images/meias-monstrosSA.jpg" alt="Meias temáticas do filme Monstros S.A." loading="lazy">
                 </div>
                 <div class="movie-info">
                 <h3>Meias Monstros S.A.</h3>
